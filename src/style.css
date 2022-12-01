@@ -101,5 +101,5 @@ body {
 }
 #header-bottom {
     position: absolute;
-    transform: translateX(-160px) translateY(-70px);
+    transform: translateX(-180px) translateY(-70px);
 }
