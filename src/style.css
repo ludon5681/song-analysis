@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    /* background gradients for browser support */
+    /* ff 3.6+ */
+    background:-moz-radial-gradient(circle at 50% 50%, rgba(58, 26, 26, 0.93) 0%, rgba(54, 37, 37, 0.84) 50%, rgba(3, 16, 41, 0.73) 99%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(circle at 50% 50%, rgba(58, 26, 26, 0.93) 0%, rgba(54, 37, 37, 0.84) 50%, rgba(3, 16, 41, 0.73) 99%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(circle at 50% 50%, rgba(58, 26, 26, 0.93) 0%, rgba(54, 37, 37, 0.84) 50%, rgba(3, 16, 41, 0.73) 99%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(circle at 50% 50%, rgba(58, 26, 26, 0.93) 0%, rgba(54, 37, 37, 0.84) 50%, rgba(3, 16, 41, 0.73) 99%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(circle at 50% 50%, rgba(58, 26, 26, 0.93) 0%, rgba(54, 37, 37, 0.84) 50%, rgba(3, 16, 41, 0.73) 99%);
+}
+
+@media only screen and (max-width: 768px) {
+    body #album-cover-container {
+        width: 80vw;
+        height: auto;
+    }
+}
+
+@keyframes pageChange {
+    from {
+        filter: brightness(100%);
+    } to {
+        filter: brightness(0%);
+        background: black;
+    }
+}
+
+.container-outer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+#album-cover-container {
+    height: 60vh;
+    width: auto;
+    text-align: center;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.album-text {
+    color: white;
+    font-family: 'Rubik Glitch', cursive;
+    user-select: none;
+    position: absolute;
+    text-align: center;
+    font-size: 120px;
+    z-index: 100;
+    transition: all 1s ease;
+    line-height: 50vh;
+}
+.subheading {
+    color: white;
+    user-select: none;
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    transition: all 1s ease;
+    margin-top: 180px;
+
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.2rem;
+}
+#album-cover {
+    max-width: 100%;
+    max-height: 100%;
+    transition: all 0.5s ease;
+}
+.hovered {
+    transform: scale(1.1);
+    filter: brightness(50%);
+    opacity: 70%;
+}
+.invisible {
+    transform: skewX(20deg);
+    opacity: 0;
+}
+.pageChange {
+    animation: pageChange 0.8s ease forwards;
+}
