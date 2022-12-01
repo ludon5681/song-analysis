@@ -59,10 +59,11 @@ body {
     user-select: none;
     position: absolute;
     text-align: center;
-    font-size: 120px;
+    font-size: 80px;
     z-index: 100;
+    line-height: 70px;
     transition: all 1s ease;
-    line-height: 50vh;
+    /*line-height: 50vh;*/
 }
 .subheading {
     color: white;
@@ -71,7 +72,7 @@ body {
     text-align: center;
     z-index: 100;
     transition: all 1s ease;
-    margin-top: 180px;
+    margin-top: 230px;
 
     font-family: 'League Spartan', sans-serif;
     font-size: 1.2rem;
@@ -92,4 +93,13 @@ body {
 }
 .pageChange {
     animation: pageChange 0.8s ease forwards;
+}
+
+#header-top {
+    position: absolute;
+    transform: translateX(-260px) translateY(-70px);
+}
+#header-bottom {
+    position: absolute;
+    transform: translateX(-160px) translateY(-70px);
 }
