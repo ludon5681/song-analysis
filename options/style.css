@@ -1,22 +1,76 @@
 body {
     margin: 0;
     height: 100vh;
-
-    /* ff 3.6+ */
-    background:-moz-radial-gradient(circle at 50% 50%, rgba(58, 26, 26, 0.93) 0%, rgba(54, 37, 37, 0.84) 50%, rgba(3, 16, 41, 0.73) 99%);
-
-    /* safari 5.1+,chrome 10+ */
-    background:-webkit-radial-gradient(circle at 50% 50%, rgba(58, 26, 26, 0.93) 0%, rgba(54, 37, 37, 0.84) 50%, rgba(3, 16, 41, 0.73) 99%);
-
-    /* opera 11.10+ */
-    background:-o-radial-gradient(circle at 50% 50%, rgba(58, 26, 26, 0.93) 0%, rgba(54, 37, 37, 0.84) 50%, rgba(3, 16, 41, 0.73) 99%);
-
-    /* ie 10+ */
-    background:-ms-radial-gradient(circle at 50% 50%, rgba(58, 26, 26, 0.93) 0%, rgba(54, 37, 37, 0.84) 50%, rgba(3, 16, 41, 0.73) 99%);
-
-    /* global 92%+ browsers support */
-    background:radial-gradient(circle at 50% 50%, rgba(58, 26, 26, 0.93) 0%, rgba(54, 37, 37, 0.84) 50%, rgba(3, 16, 41, 0.73) 99%);
+    overflow: hidden;
 }
-.container-outer {
+* {
+    margin: 0;
+}
+.options {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-family: 'Chakra Petch', sans-serif;
+}
+.bg-image {
+    background-image: url("../Assets/starry-sky.jpg");
+    background-size: 100%;
+    filter: blur(0px);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+    z-index: -1;
+}
+.option, #player-container {
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: all 0.4s;
+}
+.option:hover, #player-container:hover {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transform: scale(110%);
+}
+
+
+/* Player styling */
+#player-container {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+.player {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+}
+.player-image {
+    width: 30px;
+    height: auto;
+    border-style: none;
+    border-radius: 4px;
+}
+.play-button {
+    position: absolute;
+    transition: transform 0.4s;
+}
+.play-button:hover {
+    transform: scale(110%);
+}
+.link-icon {
+    transform: translate(10px, 12px);
 }

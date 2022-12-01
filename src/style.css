@@ -97,7 +97,7 @@ body {
 
 #header-top {
     position: absolute;
-    transform: translateX(-260px) translateY(-70px);
+    transform: translateX(-240px) translateY(-70px);
 }
 #header-bottom {
     position: absolute;
