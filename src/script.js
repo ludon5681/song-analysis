@@ -4,7 +4,7 @@ function sleep(ms) {
 
 $(function() {
     //$("body").overlayScrollbars({ });
-
+    $("body").removeClass("pageChange");
     $("#album-cover, .album-text, .subheading").on("mouseenter", async function() {
         $("#album-cover").addClass("hovered");
         await sleep(150);
