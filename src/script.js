@@ -2,6 +2,10 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+	OverlayScrollbars(document.querySelectorAll("body"), { });
+});
+
 $(function() {
     //$("body").overlayScrollbars({ });
     $("body").removeClass("pageChange");

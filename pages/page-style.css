@@ -1,0 +1,81 @@
+body {
+    background-color: #d3d3d3;
+    transition: background-color 0.8s;
+}
+p {
+    color: white;
+    line-height: 1.4rem;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.2rem;
+}
+.lyrics p {
+    color: white;
+    line-height: 1.2rem;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.0rem; 
+}
+.bg-image {
+    background-image: url("../Assets/starry-sky.jpg");
+    background-size: 100%;
+    filter: blur(0px);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    z-index: -1;
+}
+
+.scrollElement {
+    margin: 100vh 10% 100vh 10%;
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+#l1 {
+    --height: 1px;
+    margin-top: calc(50vh - (var(--height) / 2));
+    opacity: 0%;
+}
+#l2 {
+    --height: 1px;
+    margin-top: calc(50vh - (var(--height) / 2));
+    opacity: 0% ;
+}
+#l3 {
+    --height: 1px;
+    margin-top: calc(50vh - (var(--height) / 2));
+    opacity: 0%;
+}
+#l4 {
+    --height: 1px;
+    margin-top: calc(50vh - (var(--height) / 2));
+    opacity: 0% ;
+}
+
+#firstInterpretation {
+    --height: 1px;
+    margin-top: calc(50vh - (var(--height) / 2));
+}
+#lastInterpretation {
+    --height: 1px;
+    margin-bottom: calc(50vh - (var(--height) / 2));
+}
+
+.lyrics > .scrollElement {
+    opacity: 0;
+    position: fixed;
+    transition: opacity 0.8s;
+}
+#title {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.5rem;
+}
